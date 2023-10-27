@@ -13,6 +13,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "modern-css-reset": "^1.4.0",
     "next": "14.0.0",
     "react": "^18",
     "react-dom": "^18"

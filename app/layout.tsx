@@ -1,7 +1,15 @@
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import 'modern-css-reset';
+import '@/styles/global/globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+import type { Metadata } from 'next';
+// eslint-disable-next-line camelcase
+import { Noto_Sans_JP } from 'next/font/google';
+
+const inter = Noto_Sans_JP({
+  weight: ['400', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
