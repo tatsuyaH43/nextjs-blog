@@ -4,7 +4,7 @@ import { Text } from '@/components/Text/Text';
 const Home = () => {
   return (
     <main>
-      <Text>test</Text>
+      <Text size="lg">test</Text>
     </main>
   );
 };

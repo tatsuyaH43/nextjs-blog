@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 // eslint-disable-next-line camelcase
 import { Noto_Sans_JP } from 'next/font/google';
 
-const inter = Noto_Sans_JP({
+const NotoSansJP = Noto_Sans_JP({
   weight: ['400', '700'],
   subsets: ['latin'],
   display: 'swap',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="ja">
-      <body className={inter.className}>{children}</body>
+      <body className={NotoSansJP.className}>{children}</body>
     </html>
   );
 };
