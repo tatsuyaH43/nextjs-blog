@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 import { dummyData } from '@/dummy/data';
 import { bgImageBase64 } from '@/app/blog/[slug]/bgImageBase64';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 export const revalidate = 0; // 数値の場合は秒数となる
 export const imageSize = {
   width: 1200,
