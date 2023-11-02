@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 import { dummyData } from '@/dummy/data';
-// import { bgImageBase64 } from '@/app/blog/[slug]/bgImageBase64';
+import { ogBgImageBase64 } from '@/app/blog/[slug]/ogBgImageBase64';
 
 export const runtime = 'edge';
 export const revalidate = 0; // 数値の場合は秒数となる
@@ -11,14 +11,14 @@ const imageSize = {
   height: 630,
 };
 
-const og = async ({ params }: { params: { slug: string } }) => {
+const createOgImage = async ({ params }: { params: { slug: string } }) => {
   const res = dummyData.filter((data) => data.slug === params.slug)[0];
 
   return new ImageResponse(
     (
       <div
         style={{
-          // backgroundImage: `url(${bgImageBase64})`,
+          backgroundImage: `url(${ogBgImageBase64})`,
           height: '100%',
           width: '100%',
           padding: '20px',
@@ -75,4 +75,4 @@ const og = async ({ params }: { params: { slug: string } }) => {
   );
 };
 
-export default og;
+export default createOgImage;
