@@ -1,7 +1,4 @@
-export const dummyData = [
-  { slug: '1111', title: 'タイトル1タイトル1タイトル1タイトル1' },
-  { slug: '2222', title: 'タイトル2' },
-];
+import { dummyData } from '@/dummy/data';
 
 export const generateMetadata = async ({ params }: { params: { slug: string } }) => {
   const res = dummyData.filter((data) => data.slug === params.slug)[0];
