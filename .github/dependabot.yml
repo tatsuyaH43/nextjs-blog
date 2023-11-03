@@ -1,0 +1,22 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/github/administering-a-repository/configuration-options-for-dependency-updates
+
+version: 2
+updates:
+  # Keep npm dependencies up to date
+  - package-ecosystem: "npm" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "daily" # Check for updates daily
+    # Raise all npm pull requests with reviewers
+    reviewers:
+      - "tatsuyaH43"
+    # Raise all npm pull requests with an assignee
+    assignees:
+      - "tatsuyaH43"
+    open-pull-requests-limit: 10 # Limit to 10 open pull requests at any time
+    ignore: # Ignore updates to some dependencies
+      - dependency-name: "*"
+        update-types: [ "version-update:semver-major" ]
