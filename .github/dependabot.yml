@@ -10,13 +10,6 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily" # Check for updates daily
-    # Raise all npm pull requests with reviewers
-    reviewers:
-      - "tatsuyaH43"
-    # Raise all npm pull requests with an assignee
-    assignees:
-      - "tatsuyaH43"
-    open-pull-requests-limit: 10 # Limit to 10 open pull requests at any time
     ignore: # Ignore updates to some dependencies
       - dependency-name: "*"
         update-types: [ "version-update:semver-major" ]
