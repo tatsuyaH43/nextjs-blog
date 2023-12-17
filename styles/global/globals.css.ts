@@ -1,9 +1,15 @@
 import { globalStyle } from '@vanilla-extract/css';
 import { globalTheme } from '@/styles/theme/globalTheme.css';
+import { breakpoints } from '@/styles/variables/breakpointVariable.css';
 
 globalStyle(':root', {
   fontSize: globalTheme.font.fontSizes.root,
   scrollBehavior: 'smooth',
+  '@media': {
+    [breakpoints.ml]: {
+      fontSize: '12px',
+    },
+  },
 });
 
 globalStyle('body', {
@@ -12,19 +18,19 @@ globalStyle('body', {
   fontSize: globalTheme.font.fontSizes[16],
   color: globalTheme.color.baseText,
   lineHeight: globalTheme.font.lineHeight,
+  '@media': {
+    [breakpoints.sm]: {
+      fontSize: globalTheme.font.fontSizes[14],
+    },
+  },
 });
-
-// outline style
-// globalStyle(':focus-visible', {
-//   outline: '2px solid black', // TODO
-// });
 
 globalStyle(':focus:not(:focus-visible)', {
   outline: 'none',
 });
 
 globalStyle('b,strong', {
-  fontWeight: globalTheme.font.fontWeightBold,
+  fontWeight: globalTheme.font.fontWeight.bold,
 });
 
 globalStyle('a', {
@@ -37,7 +43,7 @@ globalStyle('button', {
   border: 'none',
 });
 
-globalStyle('input,textarea,button,select', {
+globalStyle('input, textarea, button, select', {
   fontFamily: 'inherit',
   color: 'inherit',
   appearance: 'none',
@@ -51,12 +57,9 @@ globalStyle('input[type="number"]', {
   appearance: 'textfield',
 });
 
-globalStyle(
-  'input:not([type="text"]):not([type="tel"]):not([type="email"]):not([type="password"]):not([type="url"]),button,select',
-  {
-    cursor: 'pointer',
-  }
-);
+globalStyle('button, select', {
+  cursor: 'pointer',
+});
 
 globalStyle('[aria-disabled="true"],[disabled]', {
   cursor: 'default',

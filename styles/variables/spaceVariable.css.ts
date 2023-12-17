@@ -1,6 +1,4 @@
-/**
- * 余白の定義
- */
+/** 余白の定義 */
 export const spaceSize = {
   8: '0.8rem',
   16: '1.6rem',

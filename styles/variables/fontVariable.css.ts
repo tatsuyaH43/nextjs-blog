@@ -12,6 +12,7 @@ export const fontWeight = {
 export const fontSizes = {
   root: '10px',
   12: '1.2rem',
+  14: '1.4rem',
   16: '1.6rem',
   18: '1.8rem',
   20: '2rem',
@@ -25,8 +26,9 @@ export const lineHeight = '1.5';
 /** fontのグローバル定義 */
 export const fontVariable = {
   fontFamily,
-  fontWeightNormal: fontWeight.normal,
-  fontWeightBold: fontWeight.bold,
+  fontWeight: {
+    ...fontWeight,
+  },
   fontSizes,
   lineHeight,
 };

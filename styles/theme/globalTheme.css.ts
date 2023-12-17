@@ -11,14 +11,16 @@ export const globalTheme = createThemeContract({
   font: {
     /** font-familyの値 */
     fontFamily: '',
-    /** font-weight: normalの値 */
-    fontWeightNormal: '',
-    /** font-weight: boldの値 */
-    fontWeightBold: '',
+    /** font-weightの値 */
+    fontWeight: {
+      normal: '',
+      bold: '',
+    },
     /** font-sizeの値 */
     fontSizes: {
       root: '',
       12: '',
+      14: '',
       16: '',
       18: '',
       20: '',

@@ -7,10 +7,10 @@ export const textStyles = {
   }),
   weight: {
     normal: style({
-      fontWeight: globalTheme.font.fontWeightNormal,
+      fontWeight: globalTheme.font.fontWeight.normal,
     }),
     bold: style({
-      fontWeight: globalTheme.font.fontWeightBold,
+      fontWeight: globalTheme.font.fontWeight.bold,
     }),
   },
   size: {

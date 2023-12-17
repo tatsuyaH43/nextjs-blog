@@ -1,5 +1,5 @@
 import { textStyles } from '@/components/Text/Text.css';
-import { mergeClassNames } from '@/utils/mergeClassNames';
+import clsx from 'clsx';
 
 type Props = {
   /** 子要素 */
@@ -16,13 +16,7 @@ export const Text = ({ children, weight, tag = 'p', size }: Props) => {
   const Tag = tag;
 
   return (
-    <Tag
-      className={mergeClassNames(
-        textStyles.base,
-        weight ? textStyles.weight[weight] : '',
-        size ? textStyles.size[size] : ''
-      )}
-    >
+    <Tag className={clsx(textStyles.base, weight ? textStyles.weight[weight] : '', size ? textStyles.size[size] : '')}>
       {children}
     </Tag>
   );
