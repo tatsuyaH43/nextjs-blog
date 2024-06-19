@@ -14,6 +14,7 @@
     "format": "prettier --write \"(components|app|styles|utils)/**/*.+(js|json|yml|ts|tsx|css)\""
   },
   "dependencies": {
+    "clsx": "^2.0.0",
     "modern-css-reset": "^1.4.0",
     "next": "^14.2.4",
     "react": "^18",
